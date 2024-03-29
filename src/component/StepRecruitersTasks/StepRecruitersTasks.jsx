@@ -1,8 +1,18 @@
 import './StepRecruitersTasks.css'
 import '../Section/Section.css'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import CheckBox from '../CheckBox/CheckBox.jsx'
+import Button from '../Button/Button.jsx'
+
 
 function StepRecruitersTasks() {
+
+  //пока что костыль, когда сделаем логику, будем брать из useFrom
+  const [stepIsValid, setStepIsValid] = useState(true);
+
+  let navigate = useNavigate();
+  const onRedirect = () => navigate('/HRspace/recruiterrequirements/recruiterspeculiarities');
 
   return (
     <div className='recruiters-tasks section'>
@@ -38,6 +48,14 @@ function StepRecruitersTasks() {
           checkboxName='hr_responsibility5'//от бэка
         />
       </div>
+      <div className='recruiters-tasks__button section__button-position'>
+          <Button
+            onClick={onRedirect}
+            stepIsValid={stepIsValid}
+            buttonTitle='Далее'
+            buttonType='button'
+          />
+        </div>
     </div>
   )
 }

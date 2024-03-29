@@ -38,7 +38,6 @@
   display: flex;
   flex-direction: column;
   align-items: left;
-  /* position: absolute; */
   max-width: 400px;
   width: 100%;
 }
@@ -46,9 +45,12 @@
 .form {
   box-sizing: border-box;
   max-width: calc(100vw - 400px);
-  /* min-height: 696px; */
   width: 100%;
   display: flex;
-  /* position: absolute; */
+  position: relative;
   right: 0;
+}
+
+.form_full-page {
+  max-width: 100%;
 }

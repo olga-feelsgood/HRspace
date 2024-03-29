@@ -3,3 +3,9 @@
   display: flex;
   flex-direction: column;
 }
+
+.section__button-position {
+  position: absolute;
+  right: 0px;
+  bottom: 45px;
+}

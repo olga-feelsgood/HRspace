@@ -216,7 +216,7 @@ function SideBarJobDescription() {
           <NavLink to='/HRspace/workingconditions/firstinterviewdate'
             className={pathname !== '/HRspace/workingconditions/firstinterviewdate'
               ? 'side-bar__link link'
-              : 'side-bar__link side-bar__link_active linl'}>
+              : 'side-bar__link side-bar__link_active link'}>
             <div className='side-bar__link-container'>
               <div className='side-bar__link-title'>Старт собеседований</div>
               <div className='side-bar__link-symbol'>&#5171;</div>
@@ -228,8 +228,6 @@ function SideBarJobDescription() {
       {pathname === '/HRspace/recruiterrequirements/recruitersnumber' ||
         pathname === '/HRspace/recruiterrequirements/recruiterstasks' ||
         pathname === '/HRspace/recruiterrequirements/recruiterspeculiarities' ||
-        pathname === '/HRspace/formpayment' ||
-        pathname === '/HRspace/formsubmit' ||
         stepIsActive
 
         ? (<nav className='side-bar__container'>
