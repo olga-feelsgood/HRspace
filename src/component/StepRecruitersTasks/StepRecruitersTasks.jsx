@@ -1,10 +1,11 @@
 import './StepRecruitersTasks.css'
+import '../Section/Section.css'
 import CheckBox from '../CheckBox/CheckBox.jsx'
 
 function StepRecruitersTasks() {
 
   return (
-    <div className='recruiters-tasks'>
+    <div className='recruiters-tasks section'>
       <div className='recruiters-tasks__checkbox'>
         <CheckBox
           checkboxLabel='1'

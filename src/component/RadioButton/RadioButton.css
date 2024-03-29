@@ -1,8 +1,8 @@
-.checkbox {
+.radio-button {
   padding: 16px 0;
 }
 
-.checkbox__label {
+.radio-button__label {
   color: #303233;
   font-family: Arial;
   font-weight: 400;
@@ -10,37 +10,34 @@
   line-height: 24px;
 }
 
-.checkbox__input {
+.radio-button__input {
   position: absolute;
   width: 0;
   height: 0;
 }
 
-.checkbox__custom {
+.radio-button__custom {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
   width: 20px;
   height: 20px;
   background-color: #fff;
-  border: 2px solid #303233;
-  border-radius: 4px;
+  border: 2px solid #BABDBF;
+  border-radius: 50%;
   vertical-align: text-top;
   margin-right: 17px;
 }
 
-.checkbox__custom::before {
+.radio-button__custom::before {
   content: '';
   display: inline-block;
   box-sizing: border-box;
-  width: 20px;
-  height: 20px;
+  width: 9px;
+  height: 9px;
   background-color: #71A2FF;
-  background-image: url(../../images/chekbox.svg);
-  background-repeat: no-repeat;
-  background-position: center;
   border: 2px solid #71A2FF;
-  border-radius: 4px;
+  border-radius: 50%;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -48,14 +45,14 @@
   display: none;
 }
 
-.checkbox__custom::after {
+.radio-button__custom::after {
   content: '';
   display: inline-block;
   box-sizing: border-box;
   width: 20px;
   height: 20px;
   border: 2px solid #71A2FF;
-  border-radius: 4px;
+  border-radius: 50%;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -63,10 +60,10 @@
   display: none;
 }
 
-.checkbox__input:checked+.checkbox__custom::before {
+.radio-button__input:checked+.radio-button__custom::before {
   display: block;
 }
 
-.checkbox__input:checked+.checkbox__custom::after {
+.radio-button__input:checked+.radio-button__custom::after {
   display: block;
 }
