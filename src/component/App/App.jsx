@@ -27,6 +27,7 @@ import StepRecruitersPeculiarities from '../StepRecruitersPeculiarities/StepRecr
 import StepCheckBeforePayment from '../StepCheckBeforePayment/StepCheckBeforePayment.jsx'
 import StepFormSubmit from '../StepFormSubmit/StepFormSubmit.jsx'
 import PageNotFound from '../PageNotFound/PageNotFound.jsx'
+import Layout from '../Layout/Layout.jsx'
 
 
 function App() {
@@ -34,8 +35,8 @@ function App() {
 
   return (
     <>
-<main>
-        <Routes>
+      <Routes>
+        <Route path='/' element={<Layout />}>
           <Route path='/HRspace' element={<StepHome />} />
 
           <Route path='/HRspace/jobdescription/warning' element={<StepWarning />} />
@@ -68,9 +69,9 @@ function App() {
           <Route path='/HRspace/formpayment' element={<StepCheckBeforePayment />} />
           <Route path='/HRspace/formsubmit' element={<StepFormSubmit />} />
 
-          <Route path='*' element={<PageNotFound />} />
-        </Routes>
-        </main>
+        </Route>
+        <Route path='*' element={<PageNotFound />} />
+      </Routes>
     </>
   )
 }
