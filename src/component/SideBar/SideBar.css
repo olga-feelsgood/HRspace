@@ -1,0 +1,49 @@
+.side-bar__container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin: 44px 0 0 0;
+}
+
+.side-bar__link {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  color: #BABDBF;
+  border: none;
+  border-radius: 8px;
+  font-family: Arial;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 20px 13px;
+  margin: 4px 0;
+}
+
+.side-bar__link-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.side-bar__link-symbol {
+  font-family: Arial;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  padding-right: 6px;
+}
+
+.side-bar__link:visited {
+  color: #303233;
+}
+
+.side-bar__link:hover {
+  background-color: #E1E8FD;
+}
+
+.side-bar__link_active {
+  background-color: #E1E8FD;
+  color: #303233;
+}
