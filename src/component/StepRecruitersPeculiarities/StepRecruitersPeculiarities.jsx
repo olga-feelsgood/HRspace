@@ -9,20 +9,27 @@ function StepRecruitersPeculiarities() {
 
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(false);
 
   let navigate = useNavigate();
   const onRedirect = () => navigate('/HRspace/formpayment');
 
   return (
     <div className='recruiters-peculiarities'>
-            <div className='recruiters-peculiarities__button section__button-position'>
-          <Button
-            onClick={onRedirect}
-            stepIsValid={stepIsValid}
-            buttonTitle='Далее'
-            buttonType='button'
-          />
-        </div>
+
+      <div className='recruiters-peculiarities__input-container'>
+
+      </div>
+
+
+      <div className='recruiters-peculiarities__button section__button-position'>
+        <Button
+          onClick={onRedirect}
+          stepIsValid={stepIsValid}
+          buttonTitle='Далее'
+          buttonType='button'
+        />
+      </div>
     </div>
   )
 }

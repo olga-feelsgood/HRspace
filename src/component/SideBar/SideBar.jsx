@@ -254,7 +254,7 @@ function SideBarJobDescription() {
               ? 'side-bar__link link'
               : 'side-bar__link side-bar__link_active link'}>
             <div className='side-bar__link-container'>
-              <div className='side-bar__link-title'>Требования к рекрутеру+</div>
+              <div className='side-bar__link-title'>Требования к рекрутеру</div>
               <div className='side-bar__link-symbol'>&#5171;</div>
             </div>
           </NavLink>
