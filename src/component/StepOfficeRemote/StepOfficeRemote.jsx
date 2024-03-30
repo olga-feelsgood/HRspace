@@ -3,6 +3,7 @@ import '../Section/Section.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import RadioButton from '../RadioButton/RadioButton.jsx'
+import Error from '../Error/Error.jsx'
 import Button from '../Button/Button.jsx'
 
 
@@ -10,6 +11,7 @@ function StepOfficeRemote() {
 
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(true);
 
   let navigate = useNavigate();
   const onRedirect = () => navigate('/HRspace/jobdescription/salary');
@@ -36,14 +38,18 @@ function StepOfficeRemote() {
           radioName='work_format'//от бэка
         />
       </div>
+      <div className='office-remote__error'>
+        <Error errorMessage = {errorMessage}/>
+      </div>
+
       <div className='office-remote__button section__button-position'>
-          <Button
-            onClick={onRedirect}
-            stepIsValid={stepIsValid}
-            buttonTitle='Далее'
-            buttonType='button'
-          />
-        </div>
+        <Button
+          onClick={onRedirect}
+          stepIsValid={stepIsValid}
+          buttonTitle='Далее'
+          buttonType='button'
+        />
+      </div>
     </div>
   )
 }
