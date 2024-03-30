@@ -1,0 +1,68 @@
+.radio-payment {
+  max-width: 896px;
+  margin-bottom: 20px;
+}
+
+.radio-payment__label-container {
+  display: flex;
+  flex-direction: row;
+  color: #303233;
+  font-family: Arial;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: #F4F7FA;
+  align-items: center;
+  padding: 40px 32px;
+  max-height: 152px;
+}
+
+.radio-payment__label-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.radio-payment__title-container {
+  width: 662px;
+  margin-right: 52px;
+}
+
+.radio-payment__percentage {
+  margin: 0;
+  color: #303233;
+  font-family: 'Proxima Nova';
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 42px;
+  margin-right: 32px;
+  min-width: 55px;
+}
+
+.radio-payment__title {
+  margin: 0;
+  color: #303233;
+  font-family: 'Proxima Nova';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  margin-bottom: 16px;
+}
+
+.radio-payment__text {
+  margin: 0;
+  color: #959799;
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.radio-payment__custom {
+  margin-right: 12px;
+}
