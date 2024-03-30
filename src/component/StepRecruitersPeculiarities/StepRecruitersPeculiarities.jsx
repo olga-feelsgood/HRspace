@@ -2,6 +2,7 @@ import './StepRecruitersPeculiarities.css'
 import '../Section/Section.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import TextArea from '../TextArea/TextArea.jsx'
 import Button from '../Button/Button.jsx'
 
 
@@ -14,11 +15,29 @@ function StepRecruitersPeculiarities() {
   let navigate = useNavigate();
   const onRedirect = () => navigate('/HRspace/formpayment');
 
+  const [currentInputLength, setCurrentInputLenght] = useState(0);
+
+  function onChangeFunction(event) {
+    setCurrentInputLenght(event.target.value.length)
+  }
+
+
   return (
-    <div className='recruiters-peculiarities'>
+    <div className='recruiters-peculiarities section'>
 
-      <div className='recruiters-peculiarities__input-container'>
+      <div className='recruiters-peculiarities__textarea-container'>
+        <TextArea
+          errorMessage={errorMessage}
+          textAreaName='hr_requirements' //от бэка
+          textAreaPlaceholder='Укажите специальные знания и навыки, которыми должен обладать рекрутер.Будут ли дополнительные задачи.
 
+Это поможет рекрутерам оценить свою возможность закрытия заявки.
+          
+Не дублируйте ранее описанные пункты.'
+          textAreaMaxLength='1000'
+          textAreaCurrentLength={currentInputLength}
+          onChange={onChangeFunction}
+        />
       </div>
 
 
