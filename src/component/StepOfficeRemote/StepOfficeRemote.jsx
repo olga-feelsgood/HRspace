@@ -1,9 +1,11 @@
 import './StepOfficeRemote.css'
 import '../Section/Section.css'
+import '../Link/Link.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import RadioButton from '../RadioButton/RadioButton.jsx'
 import Error from '../Error/Error.jsx'
+import CurrentForm from '../CurrentForm/CurrentForm.jsx'
 import Button from '../Button/Button.jsx'
 
 
@@ -40,6 +42,11 @@ function StepOfficeRemote() {
       </div>
       <div className='office-remote__error'>
         <Error errorMessage = {errorMessage}/>
+      </div>
+
+      <div className='office-remote__current-form section__currentform-position'>
+        <CurrentForm
+        currentLink='/'/>
       </div>
 
       <div className='office-remote__button section__button-position'>
