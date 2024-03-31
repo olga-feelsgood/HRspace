@@ -3,6 +3,7 @@ import '../Section/Section.css'
 import '../Link/Link.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import InputShort from '../InputShort/InputShort.jsx'
 import Error from '../Error/Error.jsx'
 import CurrentForm from '../CurrentForm/CurrentForm.jsx'
 import Button from '../Button/Button.jsx'
@@ -19,6 +20,14 @@ function StepMoneyForRecruiters() {
 
   return (
     <div className='money-recruiters section'>
+      <div className='money-recruiters__input-container'>
+        <InputShort
+          errorMessage={errorMessage}
+          inputType='number'
+          inputName='award' // от бэка
+          inputPlaceholder='Введите размер вознаграждения'
+        />
+      </div>
 
       <div className='money-recruiters__error'>
         <Error errorMessage={errorMessage} />

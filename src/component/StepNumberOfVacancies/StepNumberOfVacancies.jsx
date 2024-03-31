@@ -3,6 +3,7 @@ import '../Section/Section.css'
 import '../Link/Link.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import InputShort from '../InputShort/InputShort.jsx'
 import Error from '../Error/Error.jsx'
 import CurrentForm from '../CurrentForm/CurrentForm.jsx'
 import Button from '../Button/Button.jsx'
@@ -19,6 +20,14 @@ function StepNumberOfVacancies() {
 
   return (
     <div className='number-vacancies section'>
+      <div className='number-vacancies__input-container'>
+        <InputShort
+          errorMessage={errorMessage}
+          inputType='number'
+          inputName='amount_of_employees' // от бэка
+          inputPlaceholder='Введите число сотрудников для поиска'
+        />
+      </div>
 
       <div className='number-vacancies__error'>
         <Error errorMessage={errorMessage} />

@@ -1,0 +1,21 @@
+.salary {
+  margin: 49px 0 0 172px;
+}
+
+.salary__input-container {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.salary__title {
+  margin: 0;
+  width: 533px;
+  color: #303233;
+  font-family: 'Proxima Nova';
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 42px;
+  margin-bottom: 12px;
+}

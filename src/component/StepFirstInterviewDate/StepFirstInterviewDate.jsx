@@ -3,6 +3,7 @@ import '../Section/Section.css'
 import '../Link/Link.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import InputShort from '../InputShort/InputShort.jsx'
 import Error from '../Error/Error.jsx'
 import CurrentForm from '../CurrentForm/CurrentForm.jsx'
 import Button from '../Button/Button.jsx'
@@ -18,6 +19,14 @@ function StepFirstInterviewDate() {
 
   return (
     <div className='interview-date section'>
+      <div className='interview-date__input-container'>
+        <InputShort
+          errorMessage={errorMessage}
+          inputType='date'
+          inputName='start_interview' // от бэка
+          inputPlaceholder='ДД.ММ.ГГГГ'
+        />
+      </div>
 
       <div className='interview-date__error'>
         <Error errorMessage={errorMessage} />

@@ -24,7 +24,7 @@ function StepCity() {
         <InputShort
           errorMessage={errorMessage}
           inputType='text'
-          inputName='city'
+          inputName='city' //от бэка
           inputPlaceholder='Введите название города'
         />
       </div>

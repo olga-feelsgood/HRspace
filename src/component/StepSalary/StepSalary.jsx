@@ -3,6 +3,7 @@ import '../Section/Section.css'
 import '../Link/Link.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import InputShort from '../InputShort/InputShort.jsx'
 import Error from '../Error/Error.jsx'
 import CurrentForm from '../CurrentForm/CurrentForm.jsx'
 import Button from '../Button/Button.jsx'
@@ -19,6 +20,22 @@ function StepSalary() {
 
   return (
     <div className='salary section'>
+      <h2 className="salary__title">Заработная плата до вычета НДФЛ</h2>
+
+      <div className='salary__input-container'>
+        <InputShort
+          errorMessage={errorMessage}
+          inputType='number'
+          inputName='salary_from' // от бэка
+          inputPlaceholder='От'
+        />
+        <InputShort
+          errorMessage={errorMessage}
+          inputType='number'
+          inputName='salary_to' // от бэка
+          inputPlaceholder='До'
+        />
+      </div>
 
       <div className='salary__error'>
         <Error errorMessage={errorMessage} />

@@ -3,6 +3,7 @@ import '../Section/Section.css'
 import '../Link/Link.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import Input from '../Input/Input.jsx'
 import Error from '../Error/Error.jsx'
 import CurrentForm from '../CurrentForm/CurrentForm.jsx'
 import Button from '../Button/Button.jsx'
@@ -19,6 +20,14 @@ function StepSkills() {
 
   return (
     <div className='skills section'>
+      <div className='skills__input-container'>
+        <Input
+          errorMessage={errorMessage}
+          inputType='text'
+          inputName='skill' //от бэка
+          inputPlaceholder='Введите навык'
+        />
+      </div>
 
       <div className='skills__error'>
         <Error errorMessage={errorMessage} />

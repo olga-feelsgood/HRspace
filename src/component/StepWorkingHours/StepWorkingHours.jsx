@@ -3,6 +3,7 @@ import '../Section/Section.css'
 import '../Link/Link.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import InputShort from '../InputShort/InputShort.jsx'
 import Error from '../Error/Error.jsx'
 import CurrentForm from '../CurrentForm/CurrentForm.jsx'
 import Button from '../Button/Button.jsx'
@@ -19,6 +20,20 @@ function StepWorkingHours() {
 
   return (
     <div className='working-hours section'>
+      <div className='working-hours__input-container'>
+        <InputShort
+          errorMessage={errorMessage}
+          inputType='time'
+          inputName='start_work_day' // от бэка
+          inputPlaceholder='Начало рабочего дня'
+        />
+        <InputShort
+          errorMessage={errorMessage}
+          inputType='time'
+          inputName='end_work_day' // от бэка
+          inputPlaceholder='Конец рабочего дня'
+        />
+      </div>
 
       <div className='working-hours__error'>
         <Error errorMessage={errorMessage} />
