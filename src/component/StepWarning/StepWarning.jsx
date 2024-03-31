@@ -14,7 +14,7 @@ function StepWarning() {
     const onRedirect = () => navigate('/HRspace/jobdescription/sphere');
 
   return (
-    <div className='warning'>
+    <div className='warning section'>
             <div className='warning__button section__button-position'>
           <Button
             onClick={onRedirect}

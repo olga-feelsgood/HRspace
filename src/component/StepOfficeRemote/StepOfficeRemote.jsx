@@ -40,13 +40,13 @@ function StepOfficeRemote() {
           radioName='work_format'//от бэка
         />
       </div>
+
       <div className='office-remote__error'>
-        <Error errorMessage = {errorMessage}/>
+        <Error errorMessage={errorMessage} />
       </div>
 
       <div className='office-remote__current-form section__currentform-position'>
-        <CurrentForm
-        currentLink='/'/>
+        <CurrentForm />
       </div>
 
       <div className='office-remote__button section__button-position'>
