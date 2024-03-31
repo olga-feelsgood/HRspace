@@ -12,10 +12,7 @@ function SideBarJobDescription() {
 
   return (
     <>
-      {pathname === '/HRspace/' ||
-        pathname === '/HRspace/jobdescription' ||
-        pathname === '/HRspace/jobdescription' ||
-        pathname === '/HRspace/jobdescription/warning' ||
+      {pathname === '/HRspace/jobdescription/warning' ||
         pathname === '/HRspace/jobdescription/sphere' ||
         pathname === '/HRspace/jobdescription/city' ||
         pathname === '/HRspace/jobdescription/officeremote' ||

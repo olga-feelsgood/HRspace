@@ -15,7 +15,8 @@ function Layout() {
         <section className='progress-bar'><ProgressBar /></section>
 
         {pathname === '/HRspace/formpayment' ||
-          pathname === '/HRspace/formsubmit'
+          pathname === '/HRspace/formsubmit' ||
+          pathname === '/HRspace/'
           ? <div className='main__container'>
             <form className='form form_full-page'><Outlet /></form>
           </div>

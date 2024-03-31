@@ -24,7 +24,7 @@ function StepSphere() {
         <Input
           errorMessage={errorMessage}
           inputType='text'
-          inputName='line_of_business'
+          inputName='line_of_business' //от бэка
           inputPlaceholder='Введите название сферы'
         />
       </div>
