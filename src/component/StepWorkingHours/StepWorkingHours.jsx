@@ -4,6 +4,7 @@ import '../Link/Link.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import InputShort from '../InputShort/InputShort.jsx'
+import RadioButton from '../RadioButton/RadioButton.jsx'
 import Error from '../Error/Error.jsx'
 import CurrentForm from '../CurrentForm/CurrentForm.jsx'
 import Button from '../Button/Button.jsx'
@@ -32,6 +33,29 @@ function StepWorkingHours() {
           inputType='time'
           inputName='end_work_day' // от бэка
           inputPlaceholder='Конец рабочего дня'
+        />
+      </div>
+
+      <div className='working-hours__radiobuttons'>
+        <RadioButton
+          radioTitle='Полный день'
+          radioValue='full_day'
+          radioName='schedule'//от бэка
+        />
+        <RadioButton
+          radioTitle='Гибкий график'
+          radioValue='flexible schedule'
+          radioName='schedule'//от бэка
+        />
+        <RadioButton
+          radioTitle='Сменный график'
+          radioValue='shift work'
+          radioName='schedule'//от бэка
+        />
+        <RadioButton
+          radioTitle='Вахтовый метод'
+          radioValue='watch'
+          radioName='schedule'//от бэка
         />
       </div>
 

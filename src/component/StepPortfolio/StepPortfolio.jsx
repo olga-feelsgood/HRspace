@@ -3,6 +3,7 @@ import '../Section/Section.css'
 import '../Link/Link.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import RadioButton from '../RadioButton/RadioButton.jsx'
 import Error from '../Error/Error.jsx'
 import CurrentForm from '../CurrentForm/CurrentForm.jsx'
 import Button from '../Button/Button.jsx'
@@ -19,6 +20,18 @@ function StepPortfolio() {
 
   return (
     <div className='portfolio section'>
+      <div className='portfolio__radiobuttons'>
+        <RadioButton
+          radioTitle='Необходимо предоставить'
+          radioValue='is_required'
+          radioName='portfolio'//от бэка
+        />
+        <RadioButton
+          radioTitle='Не требуется'
+          radioValue='not_required'
+          radioName='portfolio'//от бэка
+        />
+      </div>
 
       <div className='portfolio__error'>
         <Error errorMessage={errorMessage} />

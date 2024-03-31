@@ -2,6 +2,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin: 49px 0 0 172px;
 }
 
 .section__button-position {

@@ -3,6 +3,7 @@ import '../Section/Section.css'
 import '../Link/Link.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import RadioButton from '../RadioButton/RadioButton.jsx'
 import Error from '../Error/Error.jsx'
 import CurrentForm from '../CurrentForm/CurrentForm.jsx'
 import Button from '../Button/Button.jsx'
@@ -19,6 +20,25 @@ function StepRecruitersNumber() {
 
   return (
     <div className='recruiters-number section'>
+      <h2 className='recruiters-number__text'>Укажите количество рекрутеров, которые будут работать над заявкой:</h2>
+
+      <div className='recruiters-number__radiobuttons'>
+        <RadioButton
+          radioTitle='1'
+          radioValue='1'
+          radioName='amount_of_hr'//от бэка
+        />
+        <RadioButton
+          radioTitle='2'
+          radioValue='2'
+          radioName='amount_of_hr'//от бэка
+        />
+        <RadioButton
+          radioTitle='3'
+          radioValue='3'
+          radioName='amount_of_hr'//от бэка
+        />
+      </div>
 
       <div className='recruiters-number__error'>
         <Error errorMessage={errorMessage} />

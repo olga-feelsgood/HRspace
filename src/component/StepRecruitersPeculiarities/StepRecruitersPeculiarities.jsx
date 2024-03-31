@@ -4,6 +4,7 @@ import '../Link/Link.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import TextArea from '../TextArea/TextArea.jsx'
+import CheckBox from '../CheckBox/CheckBox.jsx'
 import Error from '../Error/Error.jsx'
 import CurrentForm from '../CurrentForm/CurrentForm.jsx'
 import Button from '../Button/Button.jsx'
@@ -27,7 +28,6 @@ function StepRecruitersPeculiarities() {
 
   return (
     <div className='recruiters-peculiarities section'>
-
       <div className='recruiters-peculiarities__textarea-container'>
         <TextArea
           errorMessage={errorMessage}
@@ -45,6 +45,19 @@ function StepRecruitersPeculiarities() {
 
       <div className='recruiters-peculiarities__error'>
         <Error errorMessage={errorMessage} />
+      </div>
+
+      <div className='recruiters-peculiarities__checkbox'>
+        <CheckBox
+          checkboxTitle='Только для юридических лиц и ИП'
+          checkboxValue='entity'
+          checkboxName='hr_requirements1'//от бэка
+        />
+        <CheckBox
+          checkboxTitle='Только для самозанятых и фрилансеров'
+          checkboxValue='freelancing'
+          checkboxName='hr_requirements2'//от бэка
+        />
       </div>
 
       <div className='recruiters-peculiarities__current-form section__currentform-position'>

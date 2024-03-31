@@ -16,7 +16,7 @@ function RadioButtonPayment(props) {
             <p className='radio-payment__text'>{props.radioLabelText}</p>
           </div>
         </div>
-        <input className='radio-payment__input radio-button__input' type="radio" name={props.radioName} id={props.radioLabel} value={props.radioValue} onChange={props.onChange} checked={props.checked} />
+        <input className='radio-payment__input radio-button__input' type="radio" name={props.radioName} id={props.radioValue} value={props.radioValue} onChange={props.onChange} checked={props.checked} />
         <span className='radio-payment__custom radio-button__custom'></span>
       </label>
     </div>

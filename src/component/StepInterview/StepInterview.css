@@ -1,0 +1,17 @@
+.interview__text {
+  color: #303233;
+  font-family: Arial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 142%;
+  margin: 0;
+}
+
+.interview__radiobuttons {
+  padding-left: 18px;
+}
+
+.interview__error {
+  padding-left: 18px;
+}

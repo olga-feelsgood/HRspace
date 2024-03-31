@@ -17,7 +17,7 @@ function StepTypesOfReward() {
   const onRedirect = () => navigate('/HRspace/workingconditions/moneyforrecruiters');
 
   return (
-    <div className='types-reward section'>
+    <div className='types-reward'>
 
       <div className='types-reward__radiobuttons'>
         <RadioButtonPayment

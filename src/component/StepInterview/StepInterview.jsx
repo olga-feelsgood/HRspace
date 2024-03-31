@@ -3,6 +3,7 @@ import '../Section/Section.css'
 import '../Link/Link.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import RadioButton from '../RadioButton/RadioButton.jsx'
 import Error from '../Error/Error.jsx'
 import CurrentForm from '../CurrentForm/CurrentForm.jsx'
 import Button from '../Button/Button.jsx'
@@ -19,6 +20,19 @@ function StepInterview() {
 
   return (
     <div className='interview section'>
+      <h2 className='interview__text'>Укажите, с какими кандидатами Вы бы хотели проводить собеседования самостоятельно:</h2>
+      <div className='interview__radiobuttons'>
+        <RadioButton
+          radioTitle='Со всеми кандидатами, чьё резюме будет релевантным'
+          radioValue='1'
+          radioName='format_interview'//от бэка
+        />
+        <RadioButton
+          radioTitle='С кандидатами, прошедшими предварительный отбор'
+          radioValue='2'
+          radioName='format_interview'//от бэка
+        />
+      </div>
 
       <div className='interview__error'>
         <Error errorMessage={errorMessage} />

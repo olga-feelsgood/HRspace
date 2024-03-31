@@ -3,6 +3,7 @@ import '../Section/Section.css'
 import '../Link/Link.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import RadioButton from '../RadioButton/RadioButton.jsx'
 import Error from '../Error/Error.jsx'
 import CurrentForm from '../CurrentForm/CurrentForm.jsx'
 import Button from '../Button/Button.jsx'
@@ -19,6 +20,23 @@ function StepBusinessTrips() {
 
   return (
     <div className='business-trips section'>
+      <div className='business-trips__radiobuttons'>
+        <RadioButton
+          radioTitle='Да'
+          radioValue='yes'
+          radioName='business_trip'//от бэка
+        />
+        <RadioButton
+          radioTitle='Нет'
+          radioValue='no'
+          radioName='business_trip'//от бэка
+        />
+        <RadioButton
+          radioTitle='Иногда'
+          radioValue='sometimes'
+          radioName='business_trip'//от бэка
+        />
+      </div>
 
       <div className='business-trips__error'>
         <Error errorMessage={errorMessage} />

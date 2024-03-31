@@ -3,6 +3,7 @@ import '../Section/Section.css'
 import '../Link/Link.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import RadioButton from '../RadioButton/RadioButton.jsx'
 import Error from '../Error/Error.jsx'
 import CurrentForm from '../CurrentForm/CurrentForm.jsx'
 import Button from '../Button/Button.jsx'
@@ -19,6 +20,23 @@ function StepEducation() {
 
   return (
     <div className='education section'>
+      <div className='education__radiobuttons'>
+        <RadioButton
+          radioTitle='Высшее'
+          radioValue='higher'
+          radioName='education'//от бэка
+        />
+        <RadioButton
+          radioTitle='Среднее специальное'
+          radioValue='secondary_special'
+          radioName='education'//от бэка
+        />
+        <RadioButton
+          radioTitle='Курсы'
+          radioValue='courses'
+          radioName='education'//от бэка
+        />
+      </div>
 
       <div className='education__error'>
         <Error errorMessage={errorMessage} />

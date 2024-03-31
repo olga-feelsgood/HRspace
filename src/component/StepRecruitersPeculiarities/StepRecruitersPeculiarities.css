@@ -1,3 +1,7 @@
-.recruiters-peculiarities {
-  margin: 48px 0 0 172px;
+.recruiters-peculiarities__checkbox {
+  padding-left: 18px;
+}
+
+.recruiters-peculiarities__error {
+  padding-left: 18px;
 }

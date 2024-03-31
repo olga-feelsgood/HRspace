@@ -1,0 +1,17 @@
+.recruiters-number__text {
+  color: #303233;
+  font-family: Arial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0;
+}
+
+.recruiters-number__radiobuttons {
+  padding-left: 18px;
+}
+
+.recruiters-number__error {
+  padding-left: 18px;
+}

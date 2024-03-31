@@ -1,9 +1,9 @@
-.working-hours {
-  margin: 49px 0 0 172px;
-}
-
 .working-hours__input-container {
   display: flex;
   flex-direction: row;
   gap: 12px;
+}
+
+.working-hours__radiobuttons {
+  margin: -6px 0 0 18px;
 }
