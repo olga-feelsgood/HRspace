@@ -3,6 +3,7 @@ import '../Section/Section.css'
 import '../Link/Link.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import useForm from '../../hooks/useForm'
 import RadioButton from '../RadioButton/RadioButton.jsx'
 import Error from '../Error/Error.jsx'
 import CurrentForm from '../CurrentForm/CurrentForm.jsx'
@@ -10,6 +11,8 @@ import Button from '../Button/Button.jsx'
 
 
 function StepInterview() {
+
+  const { data, handleChange } = useForm();
 
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
@@ -26,11 +29,15 @@ function StepInterview() {
           radioTitle='Со всеми кандидатами, чьё резюме будет релевантным'
           radioValue='1'
           radioName='format_interview'//от бэка
+          checked={data.format_interview == '1' ? true : false} //от бэка
+          onChange={handleChange}
         />
         <RadioButton
           radioTitle='С кандидатами, прошедшими предварительный отбор'
           radioValue='2'
           radioName='format_interview'//от бэка
+          checked={data.format_interview == '2' ? true : false} //от бэка
+          onChange={handleChange}
         />
       </div>
 

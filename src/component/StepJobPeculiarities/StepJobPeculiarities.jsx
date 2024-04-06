@@ -3,6 +3,7 @@ import '../Section/Section.css'
 import '../Link/Link.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import useForm from '../../hooks/useForm'
 import TextArea from '../TextArea/TextArea.jsx'
 import Error from '../Error/Error.jsx'
 import CurrentForm from '../CurrentForm/CurrentForm.jsx'
@@ -10,6 +11,8 @@ import Button from '../Button/Button.jsx'
 
 
 function StepJobPeculiarities() {
+
+  const { data, handleChange } = useForm();
 
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
@@ -21,7 +24,8 @@ function StepJobPeculiarities() {
   const [currentInputLength, setCurrentInputLenght] = useState(0);
 
   function onChangeFunction(event) {
-    setCurrentInputLenght(event.target.value.length)
+    setCurrentInputLenght(event.target.value.length);
+    handleChange(event);
   }
 
   return (
@@ -37,6 +41,7 @@ function StepJobPeculiarities() {
           textAreaMaxLength='1000'
           textAreaCurrentLength={currentInputLength}
           onChange={onChangeFunction}
+          value={data.features_vacancy || ''}  //от бэка
         />
       </div>
 

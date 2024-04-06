@@ -3,6 +3,7 @@ import '../Section/Section.css'
 import '../Link/Link.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import useForm from '../../hooks/useForm'
 import TextArea from '../TextArea/TextArea.jsx'
 import CheckBox from '../CheckBox/CheckBox.jsx'
 import Error from '../Error/Error.jsx'
@@ -11,6 +12,8 @@ import Button from '../Button/Button.jsx'
 
 
 function StepRecruitersPeculiarities() {
+
+  const { data, handleChange } = useForm();
 
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
@@ -22,7 +25,8 @@ function StepRecruitersPeculiarities() {
   const [currentInputLength, setCurrentInputLenght] = useState(0);
 
   function onChangeFunction(event) {
-    setCurrentInputLenght(event.target.value.length)
+    setCurrentInputLenght(event.target.value.length);
+    handleChange(event);
   }
 
 
@@ -40,6 +44,7 @@ function StepRecruitersPeculiarities() {
           textAreaMaxLength='1000'
           textAreaCurrentLength={currentInputLength}
           onChange={onChangeFunction}
+          value={data.hr_requirements || ''}  //от бэка
         />
       </div>
 
@@ -52,11 +57,15 @@ function StepRecruitersPeculiarities() {
           checkboxTitle='Только для юридических лиц и ИП'
           checkboxValue='entity'
           checkboxName='hr_requirements1'//от бэка
+          checked={data.hr_requirements1} //от бэка
+          onChange={handleChange}
         />
         <CheckBox
           checkboxTitle='Только для самозанятых и фрилансеров'
           checkboxValue='freelancing'
           checkboxName='hr_requirements2'//от бэка
+          checked={data.hr_requirements2} //от бэка
+          onChange={handleChange}
         />
       </div>
 

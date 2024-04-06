@@ -28,15 +28,24 @@ import StepCheckBeforePayment from '../StepCheckBeforePayment/StepCheckBeforePay
 import StepFormSubmit from '../StepFormSubmit/StepFormSubmit.jsx'
 import PageNotFound from '../PageNotFound/PageNotFound.jsx'
 import Layout from '../Layout/Layout.jsx'
-
+import useForm from '../../hooks/useForm.jsx'
 
 function App() {
+
+  const { data } = useForm();
+
+
+  function handleSubmit(evt) {
+    evt.preventDefault();
+    console.log(`на отправку:${JSON.stringify(data)}`);
+    // submitForm(data);
+  }
 
 
   return (
     <>
       <Routes>
-        <Route path='/' element={<Layout />}>
+        <Route path='/' element={<Layout onSubmit = {handleSubmit}/>}>
           <Route path='/HRspace' element={<StepHome />} />
 
           <Route path='/HRspace/jobdescription/warning' element={<StepWarning />} />

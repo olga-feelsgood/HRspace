@@ -4,7 +4,7 @@ import Header from '../Header/Header.jsx'
 import ProgressBar from '../ProgressBar/ProgressBar.jsx'
 import SideBar from '../SideBar/SideBar.jsx'
 
-function Layout() {
+function Layout(props) {
 
   let { pathname } = useLocation();
 
@@ -18,11 +18,11 @@ function Layout() {
           pathname === '/HRspace/formsubmit' ||
           pathname === '/HRspace/'
           ? <div className='main__container'>
-            <form className='form form_full-page'><Outlet /></form>
+            <form className='form form_full-page' onSubmit={props.onSubmit}><Outlet /></form>
           </div>
           : <div className='main__container'>
             <section className='side-bar'><SideBar /></section>
-            <form className='form'><Outlet /></form>
+            <form className='form' onSubmit={props.onSubmit}><Outlet /></form>
           </div>}
       </main>
     </>

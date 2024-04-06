@@ -3,6 +3,7 @@ import '../Section/Section.css'
 import '../Link/Link.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import useForm from '../../hooks/useForm'
 import RadioButton from '../RadioButton/RadioButton.jsx'
 import Error from '../Error/Error.jsx'
 import CurrentForm from '../CurrentForm/CurrentForm.jsx'
@@ -10,6 +11,8 @@ import Button from '../Button/Button.jsx'
 
 
 function StepBusinessTrips() {
+
+  const { data, handleChange } = useForm();
 
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
@@ -25,16 +28,22 @@ function StepBusinessTrips() {
           radioTitle='Да'
           radioValue='yes'
           radioName='business_trip'//от бэка
+          checked={data.business_trip == 'yes' ? true : false} //от бэка
+          onChange={handleChange}
         />
         <RadioButton
           radioTitle='Нет'
           radioValue='no'
           radioName='business_trip'//от бэка
+          checked={data.business_trip == 'no' ? true : false} //от бэка
+          onChange={handleChange}
         />
         <RadioButton
           radioTitle='Иногда'
           radioValue='sometimes'
           radioName='business_trip'//от бэка
+          checked={data.business_trip == 'sometimes' ? true : false} //от бэка
+          onChange={handleChange}
         />
       </div>
 

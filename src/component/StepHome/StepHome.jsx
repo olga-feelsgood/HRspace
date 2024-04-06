@@ -2,12 +2,15 @@ import './StepHome.css'
 import '../Section/Section.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import useForm from '../../hooks/useForm'
 import Input from '../Input/Input.jsx'
 import Error from '../Error/Error.jsx'
 import Button from '../Button/Button.jsx'
 
 
 function StepHome() {
+
+  const { data, handleChange } = useForm();
 
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
@@ -26,6 +29,8 @@ function StepHome() {
             inputType='text'
             inputName='name' //от бэка
             inputPlaceholder='Введите название вакансии'
+            value={data.name || ''} //от бэка
+            onChange={handleChange}
           />
         </div>
 

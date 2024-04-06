@@ -3,6 +3,7 @@ import '../Section/Section.css'
 import '../Link/Link.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import useForm from '../../hooks/useForm'
 import InputShort from '../InputShort/InputShort.jsx'
 import Error from '../Error/Error.jsx'
 import CurrentForm from '../CurrentForm/CurrentForm.jsx'
@@ -10,6 +11,8 @@ import Button from '../Button/Button.jsx'
 
 
 function StepCity() {
+
+  const { data, handleChange } = useForm();
 
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
@@ -26,6 +29,8 @@ function StepCity() {
           inputType='text'
           inputName='city' //от бэка
           inputPlaceholder='Введите название города'
+          value={data.city || ''} //от бэка
+          onChange={handleChange}
         />
       </div>
 

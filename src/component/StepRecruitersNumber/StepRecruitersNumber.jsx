@@ -3,6 +3,7 @@ import '../Section/Section.css'
 import '../Link/Link.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import useForm from '../../hooks/useForm'
 import RadioButton from '../RadioButton/RadioButton.jsx'
 import Error from '../Error/Error.jsx'
 import CurrentForm from '../CurrentForm/CurrentForm.jsx'
@@ -10,6 +11,8 @@ import Button from '../Button/Button.jsx'
 
 
 function StepRecruitersNumber() {
+
+  const { data, handleChange } = useForm();
 
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
@@ -27,16 +30,22 @@ function StepRecruitersNumber() {
           radioTitle='1'
           radioValue='1'
           radioName='amount_of_hr'//от бэка
+          checked={data.amount_of_hr == '1' ? true : false} //от бэка
+          onChange={handleChange}
         />
         <RadioButton
           radioTitle='2'
           radioValue='2'
           radioName='amount_of_hr'//от бэка
+          checked={data.amount_of_hr == '2' ? true : false} //от бэка
+          onChange={handleChange}
         />
         <RadioButton
           radioTitle='3'
           radioValue='3'
           radioName='amount_of_hr'//от бэка
+          checked={data.amount_of_hrn == '3' ? true : false} //от бэка
+          onChange={handleChange}
         />
       </div>
 

@@ -3,6 +3,7 @@ import '../Section/Section.css'
 import '../Link/Link.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import useForm from '../../hooks/useForm'
 import InputShort from '../InputShort/InputShort.jsx'
 import Error from '../Error/Error.jsx'
 import CurrentForm from '../CurrentForm/CurrentForm.jsx'
@@ -10,6 +11,8 @@ import Button from '../Button/Button.jsx'
 
 
 function StepSalary() {
+
+  const { data, handleChange } = useForm();
 
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
@@ -28,12 +31,16 @@ function StepSalary() {
           inputType='number'
           inputName='salary_from' // от бэка
           inputPlaceholder='От'
+          value={data.salary_from || ''} // от бэка
+          onChange={handleChange}
         />
         <InputShort
           errorMessage={errorMessage}
           inputType='number'
           inputName='salary_to' // от бэка
           inputPlaceholder='До'
+          value={data.salary_to || ''} // от бэка
+          onChange={handleChange}
         />
       </div>
 

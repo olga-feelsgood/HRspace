@@ -3,12 +3,15 @@ import '../Section/Section.css'
 import '../Link/Link.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import useForm from '../../hooks/useForm'
 import InputShort from '../InputShort/InputShort.jsx'
 import Error from '../Error/Error.jsx'
 import CurrentForm from '../CurrentForm/CurrentForm.jsx'
 import Button from '../Button/Button.jsx'
 
 function StepFirstInterviewDate() {
+
+  const { data, handleChange } = useForm();
 
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
@@ -25,6 +28,8 @@ function StepFirstInterviewDate() {
           inputType='date'
           inputName='start_interview' // от бэка
           inputPlaceholder='ДД.ММ.ГГГГ'
+          value={data.start_interview || ''} // от бэка
+          onChange={handleChange}
         />
       </div>
 

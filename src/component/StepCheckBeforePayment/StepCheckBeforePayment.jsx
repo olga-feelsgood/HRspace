@@ -3,6 +3,7 @@ import './StepCheckBeforePayment.css'
 import '../Link/Link.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import useForm from '../../hooks/useForm'
 import CurrentForm from '../CurrentForm/CurrentForm.jsx'
 import CheckBox from '../CheckBox/CheckBox.jsx'
 import Error from '../Error/Error.jsx'
@@ -10,6 +11,8 @@ import Button from '../Button/Button.jsx'
 
 
 function StepCheckBeforePayment() {
+
+  const { data, handleChange } = useForm();
 
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
@@ -33,6 +36,8 @@ function StepCheckBeforePayment() {
       веб-сервиса HRspace»'
             checkboxValue='agree'
             checkboxName='oferta'//от бэка
+            checked={data.oferta} //от бэка
+            onChange={handleChange}
           />
         </div>
 

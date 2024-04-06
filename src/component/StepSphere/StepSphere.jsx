@@ -3,6 +3,7 @@ import '../Section/Section.css'
 import '../Link/Link.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import useForm from '../../hooks/useForm'
 import Input from '../Input/Input.jsx'
 import Error from '../Error/Error.jsx'
 import CurrentForm from '../CurrentForm/CurrentForm.jsx'
@@ -10,6 +11,8 @@ import Button from '../Button/Button.jsx'
 
 
 function StepSphere() {
+
+  const { data, handleChange } = useForm();
 
   //пока что костыль, когда сделаем логику, будем брать из useFrom
   const [stepIsValid, setStepIsValid] = useState(true);
@@ -26,6 +29,8 @@ function StepSphere() {
           inputType='text'
           inputName='line_of_business' //от бэка
           inputPlaceholder='Введите название сферы'
+          value={data.line_of_business || ''} //от бэка
+          onChange={handleChange}
         />
       </div>
 
