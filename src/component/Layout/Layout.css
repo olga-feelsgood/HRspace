@@ -1,5 +1,5 @@
 .header {
-  margin: 0;
+  margin: 0 auto;
   width: 100%;
   background-color: #222324;
   min-height: 76px;
@@ -22,6 +22,7 @@
   box-sizing: border-box;
   max-width: 1440px;
   width: 100%;
+  margin: 0 auto;
 }
 
 .main__container {
