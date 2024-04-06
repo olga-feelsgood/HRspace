@@ -2,7 +2,7 @@
 
 :root {
   font-family: 'Proxima Nova', Arial, sans-serif;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   margin: 0 auto;
   font-synthesis: none;
   text-rendering: optimizeLegibility;

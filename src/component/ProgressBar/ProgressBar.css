@@ -26,9 +26,11 @@
 .progress-bar__links {
   padding-left: 0;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  width: 100%;
   list-style: none;
-  gap: 67px;
+  /* gap: 67px; */
   margin: 17px 0;
 }
 

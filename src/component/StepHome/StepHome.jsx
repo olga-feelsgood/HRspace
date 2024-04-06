@@ -17,7 +17,7 @@ function StepHome() {
   const onRedirect = () => navigate('/HRspace/jobdescription/warning');
 
   return (
-    <div className='home section'>
+    <div className='home'>
       <div className='home__container'>
         <h1 className='home__title'>Название вакансии</h1>
         <div className='home__input-container'>

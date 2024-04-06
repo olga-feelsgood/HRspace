@@ -1,8 +1,9 @@
 .header__container {
   display: flex;
   flex-direction: row;
+  box-sizing: border-box;
+  max-width: 1440px;
   width: 100%;
-  background-color: #222324;
   padding: 0 96px;
   justify-content: space-between;
   align-items: center;
